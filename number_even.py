@@ -1,21 +1,25 @@
 #A four-digit integer is given. Find the number of even digits in it.
-
+def var_int(var_int):
 #Create a variable "var_int" and assign it a four-digit integer value.
-var_int = 1284
     
-    
-n1 = var_int%10
-var_int = var_int//10
 
-n2 = var_int%10
-var_int = var_int//10
+    a = var_int%10
+    a1 = (a%2+1)%2
+    var_int//=10
 
-n3 = var_int%10
-var_int = var_int//10
+    b = var_int%10
+    b1 = (b%2+1)%2
+    var_int//=10
 
-n4 = var_int%10 
-var_int = var_int//10
+    c = var_int%10
+    c1 = (c%2+1)%2
+    var_int//=10
+
+    d = var_int%10
+    d1 = (d%2+1)%2
+
+    return a1+b1+c1+d1
+print(var_int(1304))
 
 #Print the number of even digits in the variable "var_int".
 
-print(n1,n2,n3,n4  )
